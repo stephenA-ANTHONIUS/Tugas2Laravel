@@ -12,7 +12,10 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        //
+        // Panggil model prodi menggunakan eloquent / do Query
+        $prodi = Prodi::all(); // sama dengan perintah SQL select * from prodi
+        //dd($prodi); // singkatan DD = dump and die
+        return view('prodi.index')->with('prodi', $prodi); // selain compact bisa menggunakan with
     }
 
     /**
