@@ -1,21 +1,17 @@
-<h1>Progran Studi</h1>
+@extends('layout.main')
 
-<table>
-    <tr>
-        <th>Nama</th>
-        <th>Singkatan</th>
-        <th>kaprodi</th>
-        <th>Sekretaris</th>
-        <th>Fakultas</th>
-    </tr>
-@foreach ($prodi as $item)
-<tr>
-    <td>{{ $item->nama }}</td>
-    <td>{{ $item->singkatan }}</td>
-    <td>{{ $item->kaprodi }}</td>
-    <td>{{ $item->sekretaris }}</td>
-    <td>{{ $item->fakultas->nama }}</td>
-</tr>
-    
-@endforeach
-</table>
+@section('content')
+    <h1>Program Studi</h1>
+
+    @foreach ($prodi as $item)
+
+        {{ $item->nama }}
+        {{ $item->singkatan }}
+        {{ $item->kaprodi }}
+        {{ $item->sekretaris }}
+        {{ $item->fakultas->nama }}
+        <br>
+
+        
+    @endforeach
+@endsection

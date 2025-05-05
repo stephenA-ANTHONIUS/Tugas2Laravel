@@ -1,19 +1,15 @@
-<h1>Fakultas</h1>
+@extends('layout.main')
 
-<table>
-    <tr>
-        <th>Nama</th>
-        <th>Singkatan</th>
-        <th>Dekan</th>
-        <th>Wakil Dekan</th>
-    </tr>
-@foreach ($fakultas as $item)
-<tr>
-    <td> {{ $item->nama }}</td>
-    <td>{{ $item->singkatan }}</td>
-    <td>{{ $item->dekan }}</td>
-    <td>{{ $item->wakil_dekan }}</td>
-</tr>
-   
-@endforeach
-</table>
+@section('content')
+    <h1>Fakultas</h1>
+    @foreach ($fakultas as $item)
+
+        {{ $item->nama }}
+        {{ $item->singkatan }}
+        {{ $item->dekan }}
+        {{ $item->wakil_dekan }}
+        <br>
+
+    
+    @endforeach
+@endsection
