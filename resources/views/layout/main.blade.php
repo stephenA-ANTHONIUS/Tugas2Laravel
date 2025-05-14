@@ -93,7 +93,7 @@
                     </div>
                     <div class="flex-grow-1">
                       <h3 class="dropdown-item-title">
-                        Brad Diesel
+                        Davin Pedofil
                         <span class="float-end fs-7 text-danger"
                           ><i class="bi bi-star-fill"></i
                         ></span>
@@ -218,7 +218,7 @@
                     alt="User Image"
                   />
                   <p>
-                    Stephen Anthonius - Web Developer
+                    Stephen Anthonius - Pro Player
                     <small>Member since Nov. 2023</small>
                   </p>
                 </li>

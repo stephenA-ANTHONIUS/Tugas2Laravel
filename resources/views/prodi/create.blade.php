@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'Fakultas')
+@section('title', 'Prodi')
 
 @section('content')
 <!--begin::Row-->
@@ -8,7 +8,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-            <h3 class="card-title">List Fakultas</h3>
+            <h3 class="card-title">List Prodi</h3>
             <div class="card-tools">
                 <button
                 type="button"
@@ -29,30 +29,8 @@
                 </button>
             </div>
             </div>
-            <div class="card-body">
-                <a href="{{ route ('fakultas.create')}}" class="btn btn-primary">Tambah</a>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Nama Fakultas</th>
-                            <th>Singkatan</th>
-                            <th>Dekan</th>
-                            <th>Wakil Dekan</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($fakultas as $item)
-                            <tr>
-                                <td>{{ $item->nama }}</td>
-                                <td>{{ $item->singkatan }}</td>
-                                <td>{{ $item->dekan }}</td>
-                                <td>{{ $item->wakil_dekan }}</td>
-                            </tr> 
-                        @endforeach
-                    </tbody>
-                </table>
-                
-        </div>
+            <div class="card-body">        
+            </div>
             <!-- /.card-body -->
             <!-- <div class="card-footer">Footer</div> -->
             <!-- /.card-footer-->
@@ -61,5 +39,5 @@
         </div>
     </div>
     <!--end::Row-->
-    
+
 @endsection
