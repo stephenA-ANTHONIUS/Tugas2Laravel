@@ -30,6 +30,7 @@
             </div>
             </div>
             <div class="card-body">
+                <a href="{{ route ('prodi.create')}}" class="btn btn-primary">Tambah Prodi</a>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -47,7 +48,7 @@
                                 <td>{{ $item->singkatan }}</td>
                                 <td>{{ $item->kaprodi }}</td>
                                 <td>{{ $item->sekretaris }}</td>
-                                <td>{{ $item->fakultas->nama</td>
+                                <td>{{ $item->fakultas->nama}}</td>
                             </tr> 
                         @endforeach
                     </tbody>
