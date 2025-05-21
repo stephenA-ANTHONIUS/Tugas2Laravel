@@ -32,35 +32,23 @@
             <div class="card-body">
                 <a href="{{ route ('fakultas.create')}}" class="btn btn-primary">Tambah</a>
                 <table class="table table-bordered table-striped">
-                    <thead>
+                    <tbody>
                         <tr>
                             <th>Nama Fakultas</th>
-                            <th>Singkatan</th>
-                            <th>Dekan</th>
-                            <th>Wakil Dekan</th>
-                            <th>Aksi</th>
+                            <td>{{ $fakultas-> nama}}</td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($fakultas as $item)
-                            <tr>
-                                <td>{{ $item->nama }}</td>
-                                <td>{{ $item->singkatan }}</td>
-                                <td>{{ $item->dekan }}</td>
-                                <td>{{ $item->wakil_dekan }}</td>
-
-                                <td>
-                                    <a href="{{ route('fakultas.show', $item->id) }}" class="btn btn-info">Show</a>
-                                    <a href="{{ route('fakultas.edit', $item->id) }}" class="btn btn-warning">Edit</a>
-                                    <form action="{{ route('fakultas.destroy', $item->id) }}" method="post" class="d-inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger show_confirm" data-lte-toggle="tooltip" title="Delete" data-nama="{{$item->nama}}">Delete</button>
-                                    </form>
-                                </td>
-                            </tr> 
-                            
-                        @endforeach
+                        <tr>
+                            <th>Singkatan</th>
+                            <td>{{ $fakultas-> singkatan}}</td>
+                        </tr>
+                        <tr>
+                            <th>Dekan</th>
+                            <td>{{ $fakultas->dekan}}</td>
+                        </tr>
+                        <tr>
+                            <th>Wakil Dekan</th>
+                            <td>{{ $fakultas-> wakil_dekan}}</td>
+                        </tr>
                     </tbody>
                 </table>
                 

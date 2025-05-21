@@ -54,7 +54,7 @@ class MahasiswaController extends Controller
 
         
         // simpan data ke tabel prodi
-        Prodi::create($input);
+        Mahasiswa::create($input);
         // redirect ke halaman prodi.index
         return redirect()->route('prodi.index')->with('success', 'Data prodi berhasil ditambahkan!');
     }
@@ -64,7 +64,8 @@ class MahasiswaController extends Controller
      */
     public function show(Mahasiswa $mahasiswa)
     {
-        //
+        // dd($mahasiswa);
+        return view('mahasiswa.show', compact('mahasiswa'));
     }
 
     /**

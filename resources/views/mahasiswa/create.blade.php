@@ -25,7 +25,7 @@
                         @enderror
                       </div>
                       <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Prodi</label>
+                        <label for="nama" class="form-label">Nama</label>
                         <input type="text" class="form-control" name="nama" value="{{ old('nama') }}">
                         @error('nama')
                         <div class="text-danger"> {{ $message}}</div>
@@ -41,7 +41,7 @@
                       </div>
                       <div class="mb-3">
                         <label for="tanggal_lahir" class="form-label">Tanggal_Lahir</label>
-                        <input type="text" class="form-control" name="tanggal_lahir" value="{{ old('tanggal_lahir') }}">
+                        <input type="date" class="form-control" name="tanggal_lahir" value="{{ old('tanggal_lahir') }}">
                         @error('tanggal_lahir')
                         <div class="text-danger"> {{ $message}}</div>
                         @enderror
@@ -61,7 +61,7 @@
                         @enderror
                       </div>
                       <div class="mb-3">
-                        <label for="prodi_id" class="form-label">prodi</label>
+                        <label for="prodi_id" class="form-label">Prodi</label>
                         <select class="form-control" name="prodi_id">
                             @foreach ($prodi as $item)
                             <option value="{{ $item->id }}">{{ $item->nama }}</option>
@@ -73,7 +73,7 @@
                       </div>
                       <div class="mb-3">
                         <label for="foto" class="form-label">Foto</label>
-                        <input type="text" class="form-control" name="foto" value="{{ old('foto') }}">
+                        <input type="file" class="form-control" name="foto" value="{{ old('foto') }}">
                         @error('foto')
                         <div class="text-danger"> {{ $message}}</div>
                         @enderror
