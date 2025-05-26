@@ -73,7 +73,9 @@ class MahasiswaController extends Controller
      */
     public function edit(Mahasiswa $mahasiswa)
     {
-        //
+        $prodi = Prodi::all();
+        //dd($mahasiswa);
+        return view('mahasiswa.edit', compact('mahasiswa', 'prodi'));
     }
 
     /**
@@ -89,6 +91,18 @@ class MahasiswaController extends Controller
      */
     public function destroy(Mahasiswa $mahasiswa)
     {
-        //
+        //dd($mahasiswa);
+
+        // hapus foto jika ada
+        if ($mahasiswa->foto) {
+            $fotoPath = public_path('images/'. $mahasiswa->foto);
+            if (file_exists($fotoPath)) {
+                unlink($fotoPath); // hapusfile foto
+            }
+        }
+
+        $mahasiswa->delete(); // hapus data mahasiswa
+        // redirect ke halaman mahasiswa.index
+        return redirect()->route('mahasiswa.index')->with('success', 'Data mahasiswa berhasil dihapus!');
     }
 }

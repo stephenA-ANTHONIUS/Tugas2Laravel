@@ -823,13 +823,13 @@
     
     <!-- sweetalert -->
      
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
     $('.show_confirm').click(function(event) {
         var form = $(this).closest("form");
         var nama = $(this).data("nama");
         event.preventDefault();
-        swal({
+        swal.fire({
                 title: `Apakah Anda yakin ingin menghapus data ${nama} ini?`,
                 text: "If you delete this, it will be gone forever.",
                 icon: "warning",
@@ -841,8 +841,17 @@
                     form.submit();
                 }
             });
+      });
+  </script>
+    @session('success')
+    <script>
+      Swal.fire({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success"
     });
-</script>
+    </script>
+    @endsession
     <!--end::Script-->
   </body>
   <!--end::Body-->

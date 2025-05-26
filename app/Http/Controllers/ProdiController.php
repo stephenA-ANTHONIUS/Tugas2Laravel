@@ -52,7 +52,8 @@ class ProdiController extends Controller
      */
     public function show(Prodi $prodi)
     {
-        dd($prodi);
+        //dd($prodi);
+        return view('prodi.show', compact('prodi')); // menampilkan detail data
     }
 
     /**
@@ -60,7 +61,9 @@ class ProdiController extends Controller
      */
     public function edit(Prodi $prodi)
     {
-        //
+        dd($prodi);
+        return view('prodi.edit', compact('prodi')); // menampilkan form edit data
+
     }
 
     /**
@@ -76,6 +79,9 @@ class ProdiController extends Controller
      */
     public function destroy(Prodi $prodi)
     {
-        //
+        //dd($prodi);
+
+        $prodi->delete(); // menghapus data prodi berdasarkan id
+        return redirect()->route('prodi.index')->with('success', 'Data prodi berhasil dihapus!');
     }
 }
