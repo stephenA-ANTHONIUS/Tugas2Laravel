@@ -83,7 +83,29 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, Mahasiswa $mahasiswa)
     {
-        //
+        dd($mahasiswa);
+        // validasi input
+        $input = $request->validate([
+            'npm' => 'required|unique:mahasiswa',
+            'nama' => 'required|max:10',
+            'jenis_kelamin' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required|date',
+            'asal_sma' => 'required',
+            'prodi_id' => 'required|exists:prodi,id',
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+        // upload foto
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto'); // ambil file foto
+            $filename = time() . '.' . $file->getClientOriginalExtension(); 
+            $file->move(public_path('images'), $filename); // simpan foto ke folder public/images
+            $input['foto'] = $filename; // simpan nama file baru ke input
+        }
+        $mahasiswa->update($input);
+        // redirect ke halaman mahasiswa.index
+        return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa Berhasil diubah');
+
     }
 
     /**

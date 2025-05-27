@@ -69,9 +69,10 @@ class FakultasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Fakultas $fakultas)
+    public function update(Request $request, $fakultas)
     {
-        dd($fakultas);
+        //dd($fakultas);
+        $fakultas = Fakultas::findOrFail($fakultas);
         //validasi input
         $input = $request->validate([
             'nama' => 'required',
@@ -82,7 +83,8 @@ class FakultasController extends Controller
         //update data ke tabel fakultas
         $fakultas->update($input);
         // redirect ke halaman fakultas.index
-        return redirect()->route('fakultas.index')->width('success', 'Fakultas Berhasil Diupdate!');
+        return redirect()->route('fakultas.index')->with('success', 'Fakultas Berhasil Diupdate!');
+        
     }
 
     /**
