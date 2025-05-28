@@ -83,7 +83,7 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, Mahasiswa $mahasiswa)
     {
-        dd($mahasiswa);
+        //dd($mahasiswa);
         // validasi input
         $input = $request->validate([
             'npm' => 'required|unique:mahasiswa',

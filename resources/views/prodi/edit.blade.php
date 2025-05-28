@@ -13,6 +13,7 @@
                   <!--begin::Form-->
                 <form action="{{ route('prodi.update', $prodi->id) }}" method="POST">
                     @csrf
+                    @method('PUT')
                     <!-- @method('POST') -->
                   <form>
                     <!--begin::Body-->
@@ -49,7 +50,8 @@
                         <label for="fakultas_id" class="form-label">Fakultas</label>
                         <select class="form-control" name="fakultas_id">
                             @foreach ($fakultas as $item)
-                            <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                            <option value="{{ $item->id }}" {{ old('fakultas_id') == $item->id ? 'selected' :
+                            ($prodi->fakultas_id == $item->id ? 'selected' : null) }}>{{ $item->nama }}</option>
                             @endforeach
                         </select>
                         @error('fakultas_id')

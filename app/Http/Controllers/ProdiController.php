@@ -63,8 +63,8 @@ class ProdiController extends Controller
     {
         //dd($prodi);
         $prodi = prodi::findOrFail($prodi);
-        $fakultas = Fakultas::all(); // ambil semua data fakultas untuk dropdown
-        return view('prodi.edit', compact('prodi')); // menampilkan form edit data
+        $fakultas = Fakultas::all(); // ambil semua data fakultas
+        return view('prodi.edit', compact('prodi', 'fakultas')); // menampilkan form edit data
 
     }
 
@@ -73,7 +73,7 @@ class ProdiController extends Controller
      */
     public function update(Request $request, Prodi $prodi)
     {
-        dd($prodi);
+        //dd($prodi);
 
         // validasi input
         $input = $request->validate([
@@ -81,7 +81,7 @@ class ProdiController extends Controller
             'singkatan' => 'required|max:2',
             'kaprodi' => 'required',
             'sekretaris' => 'required',
-            'fakultas_id' => 'required|exists:fakultas,id'
+            'fakultas_id' => 'required'
         ]);
         // update data ke tabel prodi
         $prodi->update($input);

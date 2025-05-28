@@ -13,6 +13,7 @@
                   <!--begin::Form-->
                 <form action="{{ route('mahasiswa.update', $mahasiswa->id) }}" method="POST" enctype="multipart/form-data">  <!-- enctype untuk pilih foto dari storage / untuk upload file -->
                     @csrf
+                    @method('PUT')
                     <!-- @method('POST') -->
                   <form>
                     <!--begin::Body-->
