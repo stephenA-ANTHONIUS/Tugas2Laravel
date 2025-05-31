@@ -13,7 +13,6 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        // Panggil model mahasiswa menggunakan eloquent / do Query
         $mahasiswa = Mahasiswa::all(); // sama dengan perintah SQL select * from mahasiswa
         //dd($mahasiswa); // singkatan DD =
         return view('mahasiswa.index')->with('mahasiswa', $mahasiswa); // selain compact bisa menggunakan with
