@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Jadwal;
 use App\Models\Sesi;
 use App\Models\Matakuliah;
+use App\Models\User;
+
 use Illuminate\Http\Request;
 
 class JadwalController extends Controller
@@ -30,8 +32,9 @@ class JadwalController extends Controller
     {
         $sesi = Sesi::all();
         $matakuliah = Matakuliah::all();
+        $users = User::all();
 
-        return view('jadwal.create', compact('sesi', 'matakuliah'));
+        return view('jadwal.create', compact('sesi', 'matakuliah', 'users'));
         //
     }
 
