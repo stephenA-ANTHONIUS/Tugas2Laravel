@@ -62,7 +62,7 @@ class MatakuliahController extends Controller
      */
     public function edit(Matakuliah $matakuliah)
     {
-        //$prodi = Prodi::all();
+        $prodi = Prodi::all();
         //dd($matakuliah);
         return view('matakuliah.edit', compact('matakuliah', 'prodi'));
         //

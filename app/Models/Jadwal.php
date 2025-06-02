@@ -16,5 +16,18 @@ class Jadwal extends Model
         'dosen_id',
         'sesi_id'
     ];
+
+    public function matakuliah()
+    {
+        return $this->belongsTo(Matakuliah::class, 'matakuliah_id', 'id');
+    }
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'users_id', 'id');
+    }
+    public function sesi()
+    {
+        return $this->belongsTo(Sesi::class, 'sesi_id', 'id');
+    }
     //
 }
