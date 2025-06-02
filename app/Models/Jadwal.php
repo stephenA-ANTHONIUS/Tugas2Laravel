@@ -23,7 +23,7 @@ class Jadwal extends Model
     }
     public function users()
     {
-        return $this->belongsTo(User::class, 'users_id', 'id');
+        return $this->belongsTo(User::class, 'dosen_id', 'id');
     }
     public function sesi()
     {
