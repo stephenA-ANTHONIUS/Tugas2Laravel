@@ -17,28 +17,28 @@
                   <form>
                     <!--begin::Body-->
                     <div class="card-body">
-                      <div class="mb-3">
+                      <div class="col-md-6 mb-3">
                         <label for="nama" class="form-label">Nama Fakultas</label>
                         <input type="text" class="form-control" name="nama" value="{{ old('nama') }}">
                         @error('nama')
                         <div class="text-danger"> {{ $message}}</div>
                         @enderror
                       </div>
-                      <div class="mb-3">
+                      <div class="col-md-6 mb-3">
                         <label for="singkatan" class="form-label">Singkatan</label>
                         <input type="text" class="form-control" name="singkatan" value="{{ old('singkatan') }}">
                         @error('singkatan')
                         <div class="text-danger"> {{ $message}}</div>
                         @enderror
                       </div>
-                      <div class="mb-3">
+                      <div class="col-md-6 mb-3">
                         <label for="dekan" class="form-label">Nama Dekan</label>
                         <input type="text" class="form-control" name="dekan" value="{{ old('dekan') }}">
                         @error('dekan')
                         <div class="text-danger"> {{ $message}}</div>
                         @enderror
                       </div>
-                      <div class="mb-3">
+                      <div class="col-md-6 mb-3">
                         <label for="wakil_dekan" class="form-label">Wakil Dekan</label>
                         <input type="text" class="form-control" name="wakil_dekan" value="{{ old('wakil_dekan') }}">
                         @error('wakil_dekan')

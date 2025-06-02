@@ -30,27 +30,29 @@
             </div>
             </div>
             <div class="card-body">
-                <a href="{{ route ('fakultas.create')}}" class="btn btn-primary">Tambah</a>
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <th>Nama Fakultas</th>
-                            <td>{{ $fakultas-> nama}}</td>
-                        </tr>
-                        <tr>
-                            <th>Singkatan</th>
-                            <td>{{ $fakultas-> singkatan}}</td>
-                        </tr>
-                        <tr>
-                            <th>Dekan</th>
-                            <td>{{ $fakultas->dekan}}</td>
-                        </tr>
-                        <tr>
-                            <th>Wakil Dekan</th>
-                            <td>{{ $fakultas-> wakil_dekan}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <a href="{{ route ('fakultas.index')}}" class="btn btn-primary mb-3">Kembali</a>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Nama Fakultas</th>
+                                <td>{{ $fakultas-> nama}}</td>
+                            </tr>
+                            <tr>
+                                <th>Singkatan</th>
+                                <td>{{ $fakultas-> singkatan}}</td>
+                            </tr>
+                            <tr>
+                                <th>Dekan</th>
+                                <td>{{ $fakultas->dekan}}</td>
+                            </tr>
+                            <tr>
+                                <th>Wakil Dekan</th>
+                                <td>{{ $fakultas-> wakil_dekan}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
         </div>
             <!-- /.card-body -->

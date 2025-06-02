@@ -17,7 +17,7 @@
                   <form>
                     <!--begin::Body-->
                     <div class="card-body">
-                      <div class="mb-3">
+                      <div class="cold-md-6 md-3">
                         <label for="nama" class="form-label">Sesi</label>
                         <input type="text" class="form-control" name="nama" value="{{ old('nama') }}">
                         @error('nama')

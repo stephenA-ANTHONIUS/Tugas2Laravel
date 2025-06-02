@@ -30,15 +30,17 @@
             </div>
             </div>
             <div class="card-body">
-                <a href="{{ route ('sesi.create')}}" class="btn btn-primary">Tambah</a>
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <th>Sesi</th>
-                            <td>{{ $sesi-> nama}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <a href="{{ route ('sesi.index')}}" class="btn btn-primary mb-3">Kembali</a>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Sesi</th>
+                                <td>{{ $sesi-> nama}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
         </div>
             <!-- /.card-body -->

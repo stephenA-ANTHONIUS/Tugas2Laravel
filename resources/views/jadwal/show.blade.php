@@ -30,28 +30,31 @@
             </div>
             </div>
             <div class="card-body">
-               <table class="table table-bordered table-striped">
-                <tr>
-                    <th>Tahun Akademik</th>
-                    <td>{{ $jadwal-> tahun_akademik}}</td>
-                </tr>
-                <tr>
-                    <th>kode Semester</th>
-                    <td>{{ $jadwal-> kode_smt}}</td>
-                </tr>
-                <tr>
-                    <th>Matakuliah</th>
-                    <td>{{ $jadwal->matakuliah->nama}}</td>
-                </tr>
-                <tr>
-                    <th>Dosen</th>
-                    <td>{{ $jadwal->users->dosen_id}}</td>
-                </tr>
-                <tr>
-                    <th>Sesi</th>
-                    <td>{{ $jadwal->sesi->nama}}</td>
-                </tr>
-               </table>
+                <div class="table-responsive">
+                    <a href="{{ route ('jadwal.index')}}" class="btn btn-primary mb-3">Kembali</a>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Tahun Akademik</th>
+                            <td>{{ $jadwal-> tahun_akademik}}</td>
+                        </tr>
+                        <tr>
+                            <th>kode Semester</th>
+                            <td>{{ $jadwal-> kode_smt}}</td>
+                        </tr>
+                        <tr>
+                            <th>Matakuliah</th>
+                            <td>{{ $jadwal->matakuliah->nama}}</td>
+                        </tr>
+                        <tr>
+                            <th>Dosen</th>
+                            <td>{{ $jadwal->users->name}}</td> 
+                        </tr>
+                        <tr>
+                            <th>Sesi</th>
+                            <td>{{ $jadwal->sesi->nama}}</td>
+                        </tr>
+                    </table>
+                </div>
         </div>
             <!-- /.card-body -->
             <!-- <div class="card-footer">Footer</div> -->

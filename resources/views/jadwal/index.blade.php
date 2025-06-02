@@ -30,9 +30,9 @@
             </div>
             </div>
             <div class="card-body">
-                <a href="{{ route ('jadwal.create')}}" class="btn btn-primary">Tambah Jadwal</a>
-                <table class="table table-bordered table-striped">
-                    <thead>
+                <a href="{{ route ('jadwal.create')}}" class="btn btn-primary mb-3">Tambah Jadwal</a>
+                <table class="table table-bordered table-striped align-middle">
+                    <thead class="table-primary text-center">
                         <tr>
                             <th>Tahun Akademik</th>
                             <th>Kode Semester</th>
@@ -49,7 +49,6 @@
                                 <td>{{ $item->kode_smt }}</td>
                                 <td>{{ $item->kelas }}</td>
                                 <td>{{ $item->matakuliah->nama }}</td>
-                                <!-- tambai di create dll -->
                                 <td>{{ $item->users->name }}</td> 
                                 <td>{{ $item->sesi->nama }}</td>
                                 <td>

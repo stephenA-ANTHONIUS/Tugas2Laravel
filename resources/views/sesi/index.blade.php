@@ -30,9 +30,9 @@
             </div>
             </div>
             <div class="card-body">
-                <a href="{{ route ('sesi.create')}}" class="btn btn-primary">Tambah</a>
+                <a href="{{ route ('sesi.create')}}" class="btn btn-primary">Tambah Sesi</a>
                 <table class="table table-bordered table-striped">
-                    <thead>
+                    <thead class="table-primary text-center">
                         <tr>
                             <th>Sesi</th>
                         </tr>

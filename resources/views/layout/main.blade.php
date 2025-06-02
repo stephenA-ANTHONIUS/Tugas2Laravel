@@ -3,6 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <title>@yield('title')</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -93,7 +94,7 @@
                     </div>
                     <div class="flex-grow-1">
                       <h3 class="dropdown-item-title">
-                        Davin Pedofil
+                        Davin
                         <span class="float-end fs-7 text-danger"
                           ><i class="bi bi-star-fill"></i
                         ></span>

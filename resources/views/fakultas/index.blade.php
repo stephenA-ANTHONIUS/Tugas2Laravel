@@ -30,9 +30,9 @@
             </div>
             </div>
             <div class="card-body">
-                <a href="{{ route ('fakultas.create')}}" class="btn btn-primary">Tambah</a>
-                <table class="table table-bordered table-striped">
-                    <thead>
+                <a href="{{ route ('fakultas.create')}}" class="btn btn-primary">Tambah Fakultas</a>
+                <table class="table table-bordered table-striped align-middle">
+                    <thead class="table-primary text-center">
                         <tr>
                             <th>Nama Fakultas</th>
                             <th>Singkatan</th>
@@ -58,8 +58,7 @@
                                         <button type="submit" class="btn btn-danger show_confirm" data-lte-toggle="tooltip" title="Delete" data-nama="{{$item->nama}}">Delete</button>
                                     </form>
                                 </td>
-                            </tr> 
-                            
+                            </tr>                            
                         @endforeach
                     </tbody>
                 </table>

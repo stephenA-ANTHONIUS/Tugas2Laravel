@@ -19,7 +19,7 @@ class JadwalController extends Controller
         
         $jadwal = Jadwal::all();
         //dd($jadwal);
-        $jadwal = Jadwal::findOrFail($jadwal);
+
 
         return view('jadwal.index', compact('jadwal'));
         //
@@ -77,13 +77,14 @@ class JadwalController extends Controller
      */
     public function edit($jadwal)
     {
+        $users = User::all();
         $sesi = Sesi::all();
         $matakuliah = Matakuliah::all();
 
         //dd($jadwal);
         $jadwal = Jadwal::findOrFail($jadwal);
 
-        return view('jadwal.edit', compact('jadwal', 'sesi', 'matakuliah'));
+        return view('jadwal.edit', compact('jadwal', 'sesi', 'matakuliah', 'users'));
         //
     }
 

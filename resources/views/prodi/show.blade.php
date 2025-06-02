@@ -30,31 +30,33 @@
             </div>
             </div>
             <div class="card-body">
-                <a href="{{ route ('prodi.create')}}" class="btn btn-primary">Tambah</a>
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <th>Nama Prodi</th>
-                            <td>{{ $prodi-> nama}}</td>
-                        </tr>
-                        <tr>
-                            <th>Singkatan</th>
-                            <td>{{ $prodi-> singkatan}}</td>
-                        </tr>
-                        <tr>
-                            <th>Kaprodi</th>
-                            <td>{{ $prodi->kaprodi}}</td>
-                        </tr>
-                        <tr>
-                            <th>Sekretaris</th>
-                            <td>{{ $prodi->sekretaris}}</td>
-                        </tr>
-                        <tr>
-                            <th>Fakultas</th>
-                            <td>{{ $prodi->fakultas->nama}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <a href="{{ route ('prodi.index')}}" class="btn btn-primary mb-3">Kembali </a>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Nama Prodi</th>
+                                <td>{{ $prodi-> nama}}</td>
+                            </tr>
+                            <tr>
+                                <th>Singkatan</th>
+                                <td>{{ $prodi-> singkatan}}</td>
+                            </tr>
+                            <tr>
+                                <th>Kaprodi</th>
+                                <td>{{ $prodi->kaprodi}}</td>
+                            </tr>
+                            <tr>
+                                <th>Sekretaris</th>
+                                <td>{{ $prodi->sekretaris}}</td>
+                            </tr>
+                            <tr>
+                                <th>Fakultas</th>
+                                <td>{{ $prodi->fakultas->nama}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
         </div>
             <!-- /.card-body -->

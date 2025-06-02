@@ -54,7 +54,7 @@
                         <label for="dosen_id" class="form-label">Dosen</label>
                         <select class="form-control" name="dosen_id">
                             @foreach ($users as $item)
-                            <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                            <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach
                         </select>
                         @error('dosen_id')
@@ -65,7 +65,7 @@
                         <label for="sesi_id" class="form-label">Sesi</label>
                         <select class="form-control" name="sesi_id">
                             @foreach ($sesi as $item)
-                            <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                            <option value="{{ $item->id }}"{{ $jadwal->sesi_id == $item->id ? 'selected' : '' }}> {{ $item->nama }}</option>
                             @endforeach
                         </select>
                         @error('sesi_id')

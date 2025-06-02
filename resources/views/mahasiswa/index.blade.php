@@ -32,7 +32,7 @@
             <div class="card-body">
                 <a href="{{ route ('mahasiswa.create')}}" class="btn btn-primary">Tambah Mahasiswa</a>
                 <table class="table table-bordered table-striped">
-                    <thead>
+                    <thead class="table-primary text-center">
                         <tr>
                             <th>NPM</th>
                             <th>Nama</th>

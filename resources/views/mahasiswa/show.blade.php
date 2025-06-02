@@ -30,37 +30,40 @@
             </div>
             </div>
             <div class="card-body">
-               <table class="table table-bordered table-striped">
-                <tr>
-                    <th>NPM</th>
-                    <td>{{ $mahasiswa-> npm}}</td>
-                </tr>
-                <tr>
-                    <th>Nama</th>
-                    <td>{{ $mahasiswa-> nama}}</td>
-                </tr>
-                <tr>
-                    <th>Tempat, Tanggal Lahir</th>
-                    <td>{{ $mahasiswa->tempat_lahir}}, {{ $mahasiswa->tanggal_lahir}}</td>
-                </tr>
-                <tr>
-                    <th>Asal SMA</th>
-                    <td>{{ $mahasiswa-> asal_sma}}</td>
-                </tr>
-                <tr>
-                    <th>Progam Studi</th>
-                    <td>{{ $mahasiswa->prodi->nama}}</td>
-                </tr>
-                <tr>
-                    <th>Progam Studi</th>
-                    <td>{{ $mahasiswa->prodi->fakultas->nama}}</td>
-                </tr>
-                <tr>       
-                    <td colspan="2">
-                        <img src="{{ asset('images/'.$mahasiswa->foto) }}" class="img-fluid">    
-                    </td>
-                </tr>
-               </table>
+                <div>
+                    <a href="{{ route ('mahasiswa.index')}}" class="btn btn-primary mb-3">Kembali</a>               
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>NPM</th>
+                            <td>{{ $mahasiswa-> npm}}</td>
+                        </tr>
+                        <tr>
+                            <th>Nama</th>
+                            <td>{{ $mahasiswa-> nama}}</td>
+                        </tr>
+                        <tr>
+                            <th>Tempat, Tanggal Lahir</th>
+                            <td>{{ $mahasiswa->tempat_lahir}}, {{ $mahasiswa->tanggal_lahir}}</td>
+                        </tr>
+                        <tr>
+                            <th>Asal SMA</th>
+                            <td>{{ $mahasiswa-> asal_sma}}</td>
+                        </tr>
+                        <tr>
+                            <th>Progam Studi</th>
+                            <td>{{ $mahasiswa->prodi->nama}}</td>
+                        </tr>
+                        <tr>
+                            <th>Progam Studi</th>
+                            <td>{{ $mahasiswa->prodi->fakultas->nama}}</td>
+                        </tr>
+                        <tr>       
+                            <td colspan="2">
+                                <img src="{{ asset('images/'.$mahasiswa->foto) }}" class="img-fluid">    
+                            </td>
+                        </tr>
+                    </table>
+                </div>
         </div>
             <!-- /.card-body -->
             <!-- <div class="card-footer">Footer</div> -->
