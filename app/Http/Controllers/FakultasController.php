@@ -31,6 +31,11 @@ class FakultasController extends Controller
      */
     public function store(Request $request) // penyimpanan data
     {
+        // cek apakah user memiliki izin untuk membuat fakultas
+        if ($request->user()->cannot('create', Fakultas::class)) {
+            abort(403); // jika tidak memiliki izin, tampilkan halaman 403 Forbidden
+        }
+
         // validasi inout
         $input = $request->validate([
             'nama' => 'required|unique:fakultas',
@@ -44,6 +49,8 @@ class FakultasController extends Controller
 
         // redirect ke halaman fakultas.index
         return redirect()->route('fakultas.index')->with('success', 'Data fakultas berhasil ditambahkan!');
+
+        
     }
 
     /**
@@ -71,8 +78,15 @@ class FakultasController extends Controller
      */
     public function update(Request $request, $fakultas)
     {
-        //dd($fakultas);
+         //dd($fakultas);
         $fakultas = Fakultas::findOrFail($fakultas);
+
+        // cek apakah user memiliki izin untuk membuat fakultas
+        if ($request->user()->cannot('update', $fakultas)) {
+            abort(403); // jika tidak memiliki izin, tampilkan halaman 403 Forbidden
+        }
+
+       
         //validasi input
         $input = $request->validate([
             'nama' => 'required',
@@ -90,11 +104,15 @@ class FakultasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($fakultas)
+    public function destroy(Request $request,$fakultas)
     {
         //dd($fakultas); misal katek atribute pake yg bawah
         $fakultas = Fakultas::findOrFail($fakultas);
 
+        if ($request->user()->cannot('delete', $fakultas)) {
+            abort(403); // jika tidak memiliki izin, tampilkan halaman 403 Forbidden
+        }
+        
         // hapus data fakultas
         $fakultas->delete();
 

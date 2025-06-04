@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- // <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script> -->
     <title>@yield('title')</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -219,8 +219,7 @@
                     alt="User Image"
                   />
                   <p>
-                    {{Auth::user()->name}}- Frontend Developer
-                    <small>Member since Nov. 2023</small>
+                    {{Auth::user()->name}} - {{strtoupper(Auth::user()->role) }}
                   </p>
                 </li>
                 <!--end::User Image-->
@@ -315,7 +314,7 @@
               </li>
               <li class="nav-item">
                 <a class='nav-link' href='{{ url('sesi') }}'>
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon bi bi-clock-history"></i>
                   <p>Sesi</p>
                 </a>
               </li>
@@ -372,7 +371,7 @@
       <!--begin::Footer-->
       <footer class="app-footer">
         <!--begin::To the end-->
-        <div class="float-end d-none d-sm-inline">Anything you want</div>
+        <div class="float-end d-none d-sm-inline">Create By Stephen Anthonius</div>
         <!--end::To the end-->
         <!--begin::Copyright-->
         <strong>
