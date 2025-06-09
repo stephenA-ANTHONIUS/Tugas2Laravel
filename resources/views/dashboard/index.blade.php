@@ -76,7 +76,7 @@
     },
     subtitle: {
         text:
-            'Source: Universitas MDP 2025 '
+            'Source: Universitas MDP 2025'
     },
     xAxis: {
         categories: [
