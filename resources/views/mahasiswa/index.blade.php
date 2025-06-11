@@ -48,7 +48,7 @@
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->prodi->nama }}</td>
                                 <td>{{ $item->prodi->fakultas->nama}}</td>
-                                <td><img src="images/{{$item->foto }}" width="80px" /></td>
+                                <td><img src=" {{ $item->foto }}" width="80px" /></td>
                                 <td>
                                     <a href="{{ route('mahasiswa.show', $item->id) }}" class="btn btn-info">Show</a>
                                     <a href="{{ route('mahasiswa.edit', $item->id) }}" class="btn btn-warning">Edit</a>
